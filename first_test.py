@@ -15,21 +15,17 @@ def my_sum(list_of_numbers):
     return list_three[0] + list_three[1] + list_three[2] + list_three[3] + list_three[4]
 
 def shortener(string):
-    """
-     Функция получает на вход длинную строку с множеством слов.
-     Она должна вернуть ту же строку, но в словах, которые длиннее 6 символов,
-     функция должна вместо всех символов после шестого поставить одну звездочку.
-     Пример: Из слова 'verwijdering' должно получиться 'verwij*'
-    """
-    pass
 
+    pass
+    st = string.split()
+    return " ".join(list(map(lambda stri: stri if len(stri) < 6 else stri[:6] + '*', st)))
 
 
 def compare_ends(words):
-    """
-    Функция получает на вход массив строк. Вернуть надо количество строк,
-    которые не короче двух символов и у которых первый и последний
-    символ совпадают.
-    """
+
     pass
- 
+    count = 0
+    for s in words:
+        if len(s) >= 2 and s[0] == s[-1]:
+            count += 1
+    return count
