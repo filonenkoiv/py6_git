@@ -1,24 +1,19 @@
 def spam(number):
-    number = int(input("Number: "))
     return 'bulochka' * number
 
 
 def my_sum(list_of_numbers):
 
     pass
-    list_one = [10, 2, 0]
-    list_two = [10, 20, 100, 14]
-    list_three = [-50, 200, -100, -50, 12]
-
-    return list_one[0] + list_one[1] + list_one[2]
-    return list_two[0] + list_two[1] + list_two[2] + list_two[3]
-    return list_three[0] + list_three[1] + list_three[2] + list_three[3] + list_three[4]
+    sum = 0
+    for num in list_of_numbers:
+        sum += num
+    return sum
 
 def shortener(string):
 
     pass
-    st = string.split()
-    return " ".join(list(map(lambda stri: stri if len(stri) < 6 else stri[:6] + '*', st)))
+    return " ".join(list(map(lambda stri: stri if len(stri) < 6 else stri[:6] + '*', string.split())))
 
 
 def compare_ends(words):
